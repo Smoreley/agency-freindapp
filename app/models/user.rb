@@ -6,6 +6,7 @@ class User < ApplicationRecord
       user.uid = auth['uid']
       if auth['info'] 
          user.name = auth['info']['name'] || ""
+         user.profile_image = auth['info']['image'] || ""
       end
     end
   end
