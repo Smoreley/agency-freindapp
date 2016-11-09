@@ -10,13 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140627005245) do
+ActiveRecord::Schema.define(version: 20161108211135) do
+
+  create_table "groups", force: :cascade do |t|
+    t.string   "name"
+    t.string   "logo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string   "inquire"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "gender"
+    t.string   "link"
+    t.string   "email"
+    t.string   "birthday"
     t.string   "provider"
     t.string   "uid"
     t.string   "profile_image"
+    t.integer  "group_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
