@@ -24,6 +24,7 @@ gem 'high_voltage'
 gem 'omniauth'
 gem 'omniauth-facebook'
 #gem 'omniauth-twitter'
+gem 'bootstrap-sass'
 group :development do
   gem 'better_errors'
   gem 'rails_layout'
