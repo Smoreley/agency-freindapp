@@ -5,4 +5,7 @@
 <% end %>
 <% if user_signed_in? %>
   <li><%= link_to 'Users', users_path %></li>
+ <% if user_signed_in? %>
+  <li><%= link_to 'Question index', ('/questions') %></li> 
+  <% end %>
 <% end %>
