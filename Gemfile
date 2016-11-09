@@ -22,7 +22,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass'
 gem 'high_voltage'
 gem 'omniauth'
-gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+#gem 'omniauth-twitter'
+gem 'bootstrap-sass'
 group :development do
   gem 'better_errors'
   gem 'rails_layout'
