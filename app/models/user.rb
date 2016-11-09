@@ -1,5 +1,6 @@
 class User < ApplicationRecord
 
+    #TWITTER
 #  def self.create_with_omniauth(auth)
 #    create! do |user|
 #      user.provider = auth['provider']
@@ -11,6 +12,7 @@ class User < ApplicationRecord
 #    end
 #  end
     
+    #FACEBOOK
     def self.create_with_omniauth(auth)
         create! do |user|
             user.provider = auth['provider']
