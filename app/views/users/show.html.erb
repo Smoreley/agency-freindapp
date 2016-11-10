@@ -22,9 +22,26 @@
         </div>
     </div>
     
-    <div class="row">
+    <hr>
+</div>
+
+    <div class="panel-footer clearfix">
         <div class="col-sm-12">
-            <%= link_to 'Sign out', signout_path, class: "btn btn-primary" %>
+            <div class="btn-toolbar ">
+                <div class="pull-right">
+                    <%= button_to 'Sign out', signout_path, class: "btn btn-primary btn-sm", method: "get" %>
+                </div>
+                <div class="pull-left">
+                    <%= button_to 'Edit', edit_user_path, class: "btn btn-success btn-sm", method: "get" %>
+                </div>
+            </div>
         </div>
     </div>
+
+<div class="wrapper">
+  <p>Your website content here.</p>
+  <div class="push"></div>
+</div>
+<div class="footer">
+  <p>Copyright (c) 2008</p>
 </div>

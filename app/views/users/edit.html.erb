@@ -1,0 +1,39 @@
+<h1>Edit</h1>
+    <hr>
+
+<div class="container">
+    <%= form_for @user, html: { multipart: true } do |f| %>
+
+        <div class="form-group">
+            <label for="fname">Personal</label>
+            <div class="row">
+                <div class="col-sm-6">
+                <%= f.text_field :first_name, class: "form-control", placeholder: "First Name" %>
+                </div>
+
+                <div class="col-sm-6">
+                <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name" %>    
+                </div>
+            </div>
+            <small id="nameHelp" class="form-text text-muted">Other users will see this.</small>
+        </div>
+        
+        <div class="form-group">
+            <label for="userEmail">Email address</label>
+            <div class="row">
+                <div class="col-sm-12">
+            <%= f.email_field :email, class: "form-control", placeholder: "Email" %>
+                </div>
+            </div>
+            <small id="emailHelp" class="form-text text-muted">Only your freinds will see this.</small>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-12">
+                    <%= f.submit "Change Account", class: "btn btn-primary" %>    
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>

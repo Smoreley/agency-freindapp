@@ -6,14 +6,19 @@ Rails.application.routes.draw do
   get '/signout' => 'sessions#destroy', :as => :signout
   get '/auth/failure' => 'sessions#failure'
 
-  get    '/questions'         => 'questions#index', as: "questions"
-  get    '/questions/new'       => 'questions#new', as: "new_questions"
-  post   '/questions/new'     => 'questions#create'
-  get    '/questions/:id'       => 'questions#show', as: "question"
-  get    '/questions/:id/edit'  => 'questions#edit', as: "edit_questions"
-  put    '/questions/:id'       => 'questions#update'
-  patch  '/questions/:id'       => 'questions#update'
-  delete '/questions/:id'       => 'questions#destroy'
+    get    '/questions'         => 'questions#index', as: "questions"
+    get    '/questions/new'       => 'questions#new', as: "new_questions"
+    post   '/questions/new'     => 'questions#create'
+    get    '/questions/:id'       => 'questions#show', as: "question"
+    get    '/questions/:id/edit'  => 'questions#edit', as: "edit_questions"
+    put    '/questions/:id'       => 'questions#update'
+    patch  '/questions/:id'       => 'questions#update'
+    delete '/questions/:id'       => 'questions#destroy'
 
- get '/get_questions' => 'questions#ask'
+    get '/get_questions' => 'questions#ask'
+    
+    
+    put     '/users/:id'        => 'users#update'
+    patch   '/users/:id'        => 'users#update'
+    
 end
