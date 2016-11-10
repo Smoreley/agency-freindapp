@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   delete '/questions/:id'       => 'questions#destroy'
 
  get '/get_questions' => 'questions#ask'
+ post '/answers'     => 'answers#create'
 end
