@@ -5,7 +5,7 @@
         <li data-target="#main-carousel" data-slide-to="1"></li>
         <li data-target="#main-carousel" data-slide-to="2"></li>
     </ol>
-    <!--/.Indicators-->
+    <!--/.Indicators-->    
 
     <!--Slides-->
     <div class="carousel-inner" role="listbox">
@@ -17,13 +17,10 @@
                 <div class="full-bg-img flex-center">
                     <ul class="animated fadeInUp col-md-12">
                         <li>
-                            <h1 class="h1-responsive flex-item">Feind of a friend</h1>
+                            <h1 class="h1-responsive">Feind of a friend</h1>
                         </li>
                         <li>
-                            <p class="flex-item">The answer to the questions your mother keeps asking you.</p>
-                        </li>
-                        <li>
-                            <%= link_to 'Sign in', signin_path, class: "btn btn-primary btn-lg flex-item"  %>
+                            <p>The answer to the questions your mother keeps asking you.</p>
                         </li>
                     </ul>
                 </div>
@@ -43,9 +40,6 @@
                         </li>
                         <li>
                             <p>And all of them are FREE!</p>
-                        </li>
-                        <li>
-                            <a target="_blank" href="http://mdbootstrap.com/bootstrap-tutorial/" class="btn btn-primary btn-lg">Start learning</a>
                         </li>
                     </ul>
                 </div>
@@ -74,6 +68,7 @@
             <!--/.Mask-->
         </div>
         <!--/.Third slide-->
+        
     </div>
     <!--/.Slides-->
 
@@ -87,4 +82,8 @@
         <span class="sr-only">Next</span>
     </a>
     <!--/.Controls-->
+</div>
+
+    <div id="login">
+    <%= link_to 'Sign in with Facebook', signin_path, class: "btn btn-primary btn-lg flex-item"  %>
 </div>
