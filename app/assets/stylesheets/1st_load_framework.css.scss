@@ -40,7 +40,7 @@ img {
 main {
   @extend .container;
   background-color: #eee;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
   }
@@ -79,19 +79,8 @@ section {
 #error_explanation h2 {
   font-size: 16px;
 }
-//.button-xs {
-//  @extend .btn;
-//  @extend .btn-primary;
-//  @extend .btn-xs;
-//}
-
-
-.wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
-}
-.footer, .push {
-    height: 155px; /* .push must be the same height as .footer */
+.button-xs {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-xs;
 }

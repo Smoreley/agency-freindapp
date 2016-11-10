@@ -1,3 +1,7 @@
-question: <%= @question %><br>
-question: <%= @question1 %><br>
-question: <%= @question2 %>
+<h2>Questions</h2>
+
+<% @questions.each do |quest| %>
+    <%= quest.id %>:
+    <%= quest.inquire %>
+<br>
+<% end %>

@@ -1,15 +1,10 @@
 class QuestionsController < ApplicationController
 
-  def index 
-    @question  = "It is difficult to get you excited"
-    @question1 = " You tend to sympathize with other people"
-    @question2 = " You value justice higher than mercy"
-  end 
+    def index 
+        @questions = Question.all
+    end 
 
-
-
-
-  def ask
+    def ask
     # p "esdcds"
     # p params
     #  @parms_answer = params.permit(:question,:value)
@@ -22,9 +17,9 @@ class QuestionsController < ApplicationController
 
     # if @new_params_answer == @Answer_ans 
     # p 'tfghjk'
-  
+
     # end
     #Question.find(params[:question])
     @question = Question.all.sample
-  end
+    end
 end

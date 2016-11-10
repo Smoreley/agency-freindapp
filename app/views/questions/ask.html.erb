@@ -1,16 +1,13 @@
 <h1> <%=  @question.inquire %>  </h1> 
+
 <%= form_for Answer.new do |f| %>
-<%= hidden_field_tag :user_id, current_user.id %>
-<%= hidden_field_tag :question_id, @question.id %>
-<%= f.submit 'true' %>
-<%= f.submit 'false' %>
+    <%= hidden_field_tag :user_id, current_user.id %>
+    <%= hidden_field_tag :question_id, @question.id %>
+
+    <%= f.submit 'true' %>
+    <%= f.submit 'false' %>
 <% end %>
 
 
-<h2> <%#= link_to '>', get_questions_path( :question => @question.id,:value =>
-true ) %>
-
-<%#= link_to '<', get_questions_path( :question => @question.id,:value =>
-false ) %>   </h2>
 
 
