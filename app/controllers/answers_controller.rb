@@ -6,13 +6,13 @@ class AnswersController < ApplicationController
         elsif params[:commit] == "false"
             user_answer = false;
         end 
-
-        Answer.create(user_id: params[:id],
-            question_id: params[:id],
+        p'dgdd'
+        Answer.create(user_id: params[:user_id],
+            question_id: params[:question_id],
             ans: user_answer )
+        p'tyu'
         
-        redirect_to url_for(questions)
-        
+        #redirect_to url_for(get_questions)
     end
 
 end
