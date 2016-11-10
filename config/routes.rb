@@ -14,11 +14,11 @@ Rails.application.routes.draw do
     put    '/questions/:id'       => 'questions#update'
     patch  '/questions/:id'       => 'questions#update'
     delete '/questions/:id'       => 'questions#destroy'
-
-    get '/get_questions' => 'questions#ask'
     
     
     put     '/users/:id'        => 'users#update'
     patch   '/users/:id'        => 'users#update'
     
+    post '/answers'     => 'answers#create'
+    get '/get_questions' => 'questions#ask'
 end
