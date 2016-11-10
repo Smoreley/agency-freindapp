@@ -15,7 +15,6 @@ Rails.application.routes.draw do
     patch  '/questions/:id'       => 'questions#update'
     delete '/questions/:id'       => 'questions#destroy'
     
-    
     put     '/users/:id'        => 'users#update'
     patch   '/users/:id'        => 'users#update'
     
