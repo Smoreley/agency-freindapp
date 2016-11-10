@@ -1,17 +1,30 @@
 <div class="container">
-<h3>User</h3>
-<p>First Name: <%= @user.first_name if @user.first_name %></p>
-<p>Last Name: <%= @user.last_name if @user.last_name %></p>
-
-<p>Gender: <%= @user.gender if @user.gender %></p>
-<p>Link: <%= @user.link if @user.link %></p>
-<p>Email: <%= @user.email if @user.email %></p>
-
-<p>Birthday: <%= @user.birthday if @user.birthday %></p>
-<p>Test: <%= @user.profile_image if @user.profile_image %></p>
-
-<%= image_tag @user.profile_image %>
-
-<%= image_tag @user.profile_image, size: "206x250"%>
-
+    <br>
+    <div class="row">
+        <div class="col-sm-12">
+            <%= image_tag @user.profile_image, size: "206x250"%>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-12">
+            <h2><%= @user.first_name if @user.first_name %><small>
+                <%= @user.last_name if @user.last_name %>
+            </small></h2>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-12">
+            <p>Gender: <%= @user.gender if @user.gender %></p>
+            <p>Email: <%= @user.email if @user.email %></p>
+            <p>Link: <%= link_to "FaceBook Link", @user.link%></p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-12">
+            <%= link_to 'Sign out', signout_path, class: "btn btn-primary" %>
+        </div>
+    </div>
 </div>

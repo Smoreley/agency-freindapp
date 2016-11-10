@@ -31,9 +31,16 @@
 }
 
 html,
-body,
+body {
+    height: 90%;
+}
+
 .view {
     height: 100%;
+}
+
+body {
+       background-color: #2E2E2E;
 }
 
 /* Carousel*/
@@ -48,20 +55,26 @@ body,
     height: 100%;
 }
 
+// Hides Carousel controls
+.right.carousel-control, .left.carousel-control {
+    opacity: 0;
+    filter:alpha(opacity=0); /* IE support */
+}
+
 .carousel-item:nth-child(1) {
-    background-image: url("http://www.publicdomainpictures.net/pictures/30000/velka/great-view.jpg");
+    background-image: url("https://elleturner4.files.wordpress.com/2015/10/img_2316.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .carousel-item:nth-child(2) {
-    background-image: url("http://mdbootstrap.com/images/regular/nature/img%20(4).jpg");
+    background-image: url("http://relentlesseventsinc.com/relentlesswp/wp-content/uploads/2015/07/bigstock-Group-Of-Friends-Having-Fun-To-58863776.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .carousel-item:nth-child(3) {
-    background-image: url("http://mdbootstrap.com/images/regular/nature/img%20(3).jpg");
+    background-image: url("http://robertewalker.com/wp-content/uploads/2015/07/Group-of-young-adults.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -77,4 +90,21 @@ body,
     .carousel .view .full-bg-img ul li .flex-item {
         margin-bottom: 1.5rem;
     }
+}
+
+#login {
+    z-index: 1;
+    position: absolute;
+    bottom: 6.5vh;
+    width: 100vw;
+    text-align: center;
+}
+
+.container {
+    overflow-x: hidden;
+}
+
+main {
+    background-color: #3E4551;
+    color: white;
 }

@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
-#ruby '2.2.4'
+ruby '2.2.4'
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'sqlite3'
 gem 'puma', '~> 3.0'
