@@ -2,11 +2,15 @@
 <div class="container">
         <div class="panel panel-default">
             <div class="panel-body">
+                
+                <% if @question %>
                 <%=  @question.inquire %>
+                <% end %>
             </div>
     </div>
 </div>
 
+<% if @question %>
 <%= form_for Answer.new, :html => { :id => "question_form" } do |f| %>
     <%= hidden_field_tag :user_id, current_user.id %>
     <%= hidden_field_tag :question_id, @question.id %>
@@ -23,5 +27,7 @@
             </div>
         </nav> 
     </footer>
+
+<% end %>
 
 <% end %>

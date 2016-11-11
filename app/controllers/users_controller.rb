@@ -12,6 +12,38 @@ class UsersController < ApplicationController
     
     def match
         @user = User.find(params[:id])
+        
+#        users_answers = Answers.where(user_id: current_user.id)
+        users_answers = @user.answers.all
+        
+        your_matches = Hash.new
+        
+        users_answers.each do |ans|
+            all_answered = Answer.where(question_id: ans.question_id)
+            
+            all_answered.each do |allans|
+               
+                if allans.user_id != @user.id
+                    if ans.ans === allans.ans
+                        if !your_matches.key?(allans.user_id)
+                            your_matches[allans.user_id] = 1
+                        elsif
+                            your_matches[allans.user_id] += 1
+                        end
+                    elsif
+                        if !your_matches.key?(allans.user_id)
+                            your_matches[allans.user_id] = 0
+                        elsif
+                            your_matches[allans.user_id] -= 1
+                        end            
+                    end
+                end
+            end
+        end
+        
+        p "testing"
+        p your_matches
+        
     end
 
     def edit
