@@ -1,14 +1,13 @@
 <h1>Match Page!</h1>
-
 <div class="container">
     
-    
-    <%= render 'users/user_match' %>
-    
-
-<%= @user.id %>
+    <%= render 'users/user_match', foundmatch: current_user %>
     
     <%= @user.answers.all.each do |test|  %>
     
     <% end %>
 </div>
+
+
+
+

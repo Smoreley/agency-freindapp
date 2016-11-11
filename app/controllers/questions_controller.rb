@@ -4,17 +4,15 @@ class QuestionsController < ApplicationController
         @questions = Question.all
     end 
 
-    def ask        
-        # Make sure we don't repeat questions already asked
-        count = 0;
-        while true && count < Question.count
-            count += 1;
-            @question = Question.all.sample
-            
-            if !current_user.answers.all.exists?(@question.id)
-                return @question
+    def ask
+        
+        Question.all.each do |quest|
+            if !current_user.answers.exists?(question_id: quest.id)
+                @question = quest
+               return @question 
             end
             
         end
+        @question = nil
     end
 end

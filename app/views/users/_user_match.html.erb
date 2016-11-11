@@ -1,9 +1,13 @@
 <div class="panel panel-default">
-    <div class="panel-header">
-    Hey all
+    <div class="panel-heading">
+        <%= foundmatch.first_name %>
+        <%= foundmatch.last_name %>
     </div>
     
     <div class="panel-body">
         
+        <%= image_tag foundmatch.profile_image, size: "206x250", id: "profile_img" %>
+        <hr>
+        <%= foundmatch.gender %>
     </div>
 </div>
