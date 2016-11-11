@@ -11,23 +11,17 @@
     <%= hidden_field_tag :user_id, current_user.id %>
     <%= hidden_field_tag :question_id, @question.id %>
 
-    <%= f.submit 'true' %>
-    <%= f.submit 'false' %>
+    <%= f.submit 'true', name: "ans", value: "true", class: "btn glyphicon glyphicon-plus-sign" %>
+    <%= f.submit 'false', name: "ans", value: "false", class: "btn glyphicon glyphicon-minus-sign" %>
 
-<footer class="footer">
-    <nav class="navbar navbar-inverse navbar-fixed-bottom">       
-        <ul class="nav navbar-nav">
-            <li class="nav-item">
-                <div class="btn-group btn-group-justified" role="group">
-                    <%= link_to '', "#", :onclick => "$('#question_form').submit()", class: "btn glyphicon glyphicon-minus-sign", style: "font-size:1.3em", :data => {:ans => "false"} %>
-                    
-                    <%= link_to '', "#", :onclick => "$('#question_form').submit()", class: "btn glyphicon glyphicon-plus-sign", style: "font-size:1.3em" %>
-                    
+    <footer class="footer">
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">       
+            <div class="btn-group btn-group-justified" role="group">
+                <%= link_to '', "#", :onclick => "$('#question_form').submit()", class: "btn glyphicon glyphicon-minus-sign", style: "font-size:1.3em" %>
 
-                </div>
-            </li>
-        </ul>
-    </nav> 
-</footer>
+                <%= link_to '', "#", :onclick => "$('#question_form').submit()", class: "btn glyphicon glyphicon-plus-sign", style: "font-size:1.3em" %>
+            </div>
+        </nav> 
+    </footer>
 
 <% end %>

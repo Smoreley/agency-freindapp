@@ -1,5 +1,7 @@
 class User < ApplicationRecord
-
+#    belongs_to :group
+    has_many :answers
+    
     #TWITTER
 #  def self.create_with_omniauth(auth)
 #    create! do |user|
