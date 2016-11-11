@@ -6,13 +6,12 @@ class AnswersController < ApplicationController
         elsif params[:commit] == "false"
             user_answer = false;
         end 
-
+        
         Answer.create(user_id: params[:id],
             question_id: params[:id],
             ans: user_answer )
         
-        redirect_to url_for(questions)
-        
+        redirect_to get_questions_url, :notice => 'Signed in! #{user_answer}'
     end
 
 end

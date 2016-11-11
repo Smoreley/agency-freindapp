@@ -1,4 +1,4 @@
 <% if user_signed_in? %>
     <li><%= link_to '', current_user, class: "glyphicon glyphicon-cog" %></li>
-    <li><%= link_to 'Question index', ('/questions') %></li> 
+    <li><%= link_to 'Question', get_questions_url%></li> 
 <% end %>

@@ -1,13 +1,33 @@
-<h1> <%=  @question.inquire %>  </h1> 
+<h1>Question</h1>
+<div class="container">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <%=  @question.inquire %>
+            </div>
+    </div>
+</div>
 
-<%= form_for Answer.new do |f| %>
+<%= form_for Answer.new, :html => { :id => "question_form" } do |f| %>
     <%= hidden_field_tag :user_id, current_user.id %>
     <%= hidden_field_tag :question_id, @question.id %>
 
     <%= f.submit 'true' %>
     <%= f.submit 'false' %>
+
+<footer class="footer">
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">       
+        <ul class="nav navbar-nav">
+            <li class="nav-item">
+                <div class="btn-group btn-group-justified" role="group">
+                    <%= link_to 'false', "#", :onclick => "$('#question_form').submit()", class: "btn glyphicon glyphicon-log-out", :data => {:ans => "false"} %>
+                    
+                    <%= link_to 'true', "#", :onclick => "$('#question_form').submit()", class: "btn glyphicon glyphicon-log-out" %>
+                    
+
+                </div>
+            </li>
+        </ul>
+    </nav> 
+</footer>
+
 <% end %>
-
-
-
-
