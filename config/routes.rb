@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
     resources :users
     root to: 'visitors#index'
-    get '/auth/:provider/callback' => 'sessions#create'
-    get '/signin'           => 'sessions#new', :as => :signin
-    get '/signout'          => 'sessions#destroy', :as => :signout
-    get '/auth/failure'     => 'sessions#failure'
+    
+    get     '/auth/:provider/callback' => 'sessions#create'
+    get     '/signin'           => 'sessions#new', :as => :signin
+    get     '/signout'          => 'sessions#destroy', :as => :signout
+    get     '/auth/failure'     => 'sessions#failure'
 
     get    '/questions'             => 'questions#index', as: "questions"
     get    '/questions/new'         => 'questions#new', as: "new_questions"
@@ -17,7 +18,8 @@ Rails.application.routes.draw do
 
     put     '/users/:id'            => 'users#update'
     patch   '/users/:id'            => 'users#update'
-
-    post '/answers'                 => 'answers#create'
-    get '/get_questions'            => 'questions#ask'
+    get     '/users/:id/matches'    => 'users#match', as: "user_matches"
+    
+    post    '/answers'              => 'answers#create'
+    get     '/get_questions'        => 'questions#ask'
 end
