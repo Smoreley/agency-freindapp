@@ -1,13 +1,20 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-        <%= foundmatch.first_name %>
-        <%= foundmatch.last_name %>
+        <table class="table">
+                <tbody>
+                    <tr>
+                        <th><%= foundmatch.first_name %> <%= foundmatch.last_name %></th>
+                        <th style="text-align:right">%<%= percent %></th>
+                    </tr>
+            </tbody>
+        </table>
     </div>
     
     <div class="panel-body">
         
         <%= image_tag foundmatch.profile_image, size: "206x250", id: "profile_img" %>
         <hr>
-        <%= foundmatch.gender %>
+            <%= foundmatch.gender %>
+            <%= foundmatch.email %>
     </div>
 </div>

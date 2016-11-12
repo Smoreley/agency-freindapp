@@ -4,30 +4,31 @@
             <div class="panel-body">
                 
                 <% if @question %>
-                <%=  @question.inquire %>
+                    <%=  @question.inquire %>
+                
+                    <%= form_for Answer.new, :html => { :id => "question_form" } do |f| %>
+                        <%= hidden_field_tag :user_id, current_user.id %>
+                        <%= hidden_field_tag :question_id, @question.id %>
+
+                        <%= f.submit 'true', name: "ans", value: "true", class: "btn glyphicon glyphicon-plus-sign" %>
+                        <%= f.submit 'false', name: "ans", value: "false", class: "btn glyphicon glyphicon-minus-sign" %>
+
+                        <footer class="footer">
+                            <nav class="navbar navbar-inverse navbar-fixed-bottom">       
+                                <div class="btn-group btn-group-justified" role="group">
+                                    <%= link_to '', "#", :onclick => "$('#question_form').submit()", class: "btn glyphicon glyphicon-minus-sign", style: "font-size:1.3em" %>
+
+                                    <%= link_to '', "#", :onclick => "$('#question_form').submit()", class: "btn glyphicon glyphicon-plus-sign", style: "font-size:1.3em" %>
+                                </div>
+                            </nav> 
+                        </footer>
+                    <% end %>
+
+                <% elsif %>
+                
+                <h3>We don't have any more questions at the moment. Be sure to check back from time to time for when more are added.</h3>
+                
                 <% end %>
             </div>
     </div>
 </div>
-
-<% if @question %>
-<%= form_for Answer.new, :html => { :id => "question_form" } do |f| %>
-    <%= hidden_field_tag :user_id, current_user.id %>
-    <%= hidden_field_tag :question_id, @question.id %>
-
-    <%= f.submit 'true', name: "ans", value: "true", class: "btn glyphicon glyphicon-plus-sign" %>
-    <%= f.submit 'false', name: "ans", value: "false", class: "btn glyphicon glyphicon-minus-sign" %>
-
-    <footer class="footer">
-        <nav class="navbar navbar-inverse navbar-fixed-bottom">       
-            <div class="btn-group btn-group-justified" role="group">
-                <%= link_to '', "#", :onclick => "$('#question_form').submit()", class: "btn glyphicon glyphicon-minus-sign", style: "font-size:1.3em" %>
-
-                <%= link_to '', "#", :onclick => "$('#question_form').submit()", class: "btn glyphicon glyphicon-plus-sign", style: "font-size:1.3em" %>
-            </div>
-        </nav> 
-    </footer>
-
-<% end %>
-
-<% end %>

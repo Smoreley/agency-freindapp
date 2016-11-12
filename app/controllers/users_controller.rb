@@ -41,13 +41,29 @@ class UsersController < ApplicationController
             end
         end
         
+        @match = User.find(your_matches[your_matches.key(your_matches.values.max)])
+        @percent = (((your_matches[@match.id]*1.0)/(users_answers.count *1.0))*100).round
+        
+        
         p "testing"
         p your_matches
+        p users_answers.count
+        p your_matches[@match.id]
         
     end
 
     def edit
         @user = User.find(params[:id])
+    end
+    
+    def update
+        @user = User.find(params[:id])
+        
+        if @user.update_attributes(user_params)
+            redirect_to current_user
+        else
+            render 'edit'    
+        end
     end
 
     private 

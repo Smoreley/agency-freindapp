@@ -1,13 +1,17 @@
-<h1>Match Page!</h1>
+<h2>Your Match</h2>
 <div class="container">
     
-    <%= render 'users/user_match', foundmatch: current_user %>
+    <%= render 'users/user_match', foundmatch: @match, percent: @percent %>
     
-    <%= @user.answers.all.each do |test|  %>
+    <% @user.answers.each do |test|  %>
     
+        <div class="row">
+            <div class="col-sm-12">
+                <%= test.id %>
+                Question:<%= test.question_id %>
+                User:<%= test.user_id %>
+                <%= test.ans %>
+            </div>
+        </div>
     <% end %>
 </div>
-
-
-
-
