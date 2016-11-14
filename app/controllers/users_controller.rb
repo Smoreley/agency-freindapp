@@ -41,14 +41,18 @@ class UsersController < ApplicationController
             end
         end
         
-        @match = User.find(your_matches[your_matches.key(your_matches.values.max)])
-        @percent = (((your_matches[@match.id]*1.0)/(users_answers.count *1.0))*100).round
-        
-        
-        p "testing"
+                p "testingALLL THE THINGS!!!!"
+        p User.all
         p your_matches
-        p users_answers.count
-        p your_matches[@match.id]
+        p "COUNT THING ALL THIGNS"
+        p your_matches.count
+#        p your_matches[@match.id]
+        
+        
+        if (!your_matches.empty?)
+            @match = User.find(your_matches.key(your_matches.values.max))
+            @percent = (((your_matches[@match.id]*1.0)/(users_answers.count *1.0))*100).round
+        end
         
     end
 
@@ -69,6 +73,6 @@ class UsersController < ApplicationController
     private 
     
     def user_params
-       params.require(:user).permit(:first_name, :last_name, :email) 
+       params.require(:user).permit(:first_name, :last_name, :email, :about, :birthday) 
     end
 end

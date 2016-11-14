@@ -1,4 +1,7 @@
 <h2>Your Match</h2>
+
+
+<% if @match %>
 <div class="container">
     
     <%= render 'users/user_match', foundmatch: @match, percent: @percent %>
@@ -15,3 +18,17 @@
         </div>
     <% end %>
 </div>
+<% elsif %>
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h4>Opps, it seems like you are a weird one.</h4>
+            <p>Keep answering questions</p>
+            
+            
+        </div>    
+    </div>
+
+</div>
+<% end %>

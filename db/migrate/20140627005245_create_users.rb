@@ -10,6 +10,7 @@ class CreateUsers < ActiveRecord::Migration
         t.string :provider
         t.string :uid
         t.string :profile_image
+        t.text   :about
         
         t.references :group, foreign_key: true
         t.timestamps

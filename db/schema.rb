@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20161108211501) do
     t.string   "provider"
     t.string   "uid"
     t.string   "profile_image"
+    t.text     "about"
     t.integer  "group_id"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -1,28 +1,49 @@
 <div class="container">
-    <br>
-    <div class="row">
-        <div class="col-sm-12">
-            <%= image_tag @user.profile_image, size: "206x250", id: "profile_img" %>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <br>
+            <div class="row">
+                <div class="col-sm-12">
+                    <%= image_tag @user.profile_image, size: "206x250", id: "profile_img" %>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><%= @user.first_name if @user.first_name %><small>
+                        <%= @user.last_name if @user.last_name %>
+                    </small></h2>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <p><%= @user.gender if @user.gender %></p>
+                </div>
+                <div class="col-xs-6">
+                    <p><%= @user.birthday if @user.birthday %></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>Email: <%= @user.email if @user.email %></p>
+                    <p>Link: <%= link_to "FaceBook Link", @user.link%></p>
+                </div>
+            </div>
+
+            <hr>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h5>About</h5>
+                    <p><%= @user.about if @user.about %></p>
+                </div>
+            </div>
+
+            <hr>
         </div>
     </div>
-    
-    <div class="row">
-        <div class="col-sm-12">
-            <h2><%= @user.first_name if @user.first_name %><small>
-                <%= @user.last_name if @user.last_name %>
-            </small></h2>
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="col-sm-12">
-            <p>Gender: <%= @user.gender if @user.gender %></p>
-            <p>Email: <%= @user.email if @user.email %></p>
-            <p>Link: <%= link_to "FaceBook Link", @user.link%></p>
-        </div>
-    </div>
-    
-    <hr>
 </div>
 
 <footer class="footer">

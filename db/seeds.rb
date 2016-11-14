@@ -12,4 +12,11 @@ q4 = Question.create(inquire: "You rapidly get involved in the social life of a 
 q5 = Question.create(inquire: "You tend to rely on your experience rather than on theoretical alternatives?")
 q6 = Question.create(inquire: "As a rule, you proceed only when you have a clear and detailed plan?")
 
+q7 = Question.create(inquire: "Are you a wanderlust?")
+q8 = Question.create(inquire: "Left or right?")
+q9 = Question.create(inquire: "In general which to you prefer, cold or hot?")
+q10 = Question.create(inquire: "Are you a morning person?")
+q11 = Question.create(inquire: "Silence is golden?")
+q12 = Question.create(inquire: "Do you like when it rains?")
+
 
