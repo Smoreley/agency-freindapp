@@ -6,12 +6,19 @@ class QuestionsController < ApplicationController
 
     def ask
         
+                  p "THIS IS AWESOME!!!!!!!!!!!!!!!!!!!!!!"
+            p current_user.answers.all.where("created_at >= ?", Time.zone.now.beginning_of_day)
+        
+        p "THE END IS NOW!"
+        
         Question.all.each do |quest|
-            if !current_user.answers.exists?(question_id: quest.id)
+            
+            @answered_today = current_user.answers.where("created_at >= ?", Time.zone.now.beginning_of_day)
+            
+            if !@answered_today.exists?(question_id: quest.id)
                 @question = quest
                return @question 
-            end
-            
+            end            
         end
         @question = nil
     end

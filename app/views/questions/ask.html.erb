@@ -4,21 +4,24 @@
             <div class="panel-body">
                 
                 <% if @question %>
+                    <%= image_tag @question.image, size: "206x250", id: "profile_img" %>
+                
                     <%=  @question.inquire %>
                 
                     <%= form_for Answer.new, :html => { :id => "question_form" } do |f| %>
                         <%= hidden_field_tag :user_id, current_user.id %>
                         <%= hidden_field_tag :question_id, @question.id %>
-
+                        <%= hidden_field_tag :ans, false, id: "answer" %>
+                
                         <%= f.submit 'true', name: "ans", value: "true", class: "btn glyphicon glyphicon-plus-sign" %>
                         <%= f.submit 'false', name: "ans", value: "false", class: "btn glyphicon glyphicon-minus-sign" %>
 
                         <footer class="footer">
                             <nav class="navbar navbar-inverse navbar-fixed-bottom">       
                                 <div class="btn-group btn-group-justified" role="group">
-                                    <%= link_to '', "#", :onclick => "alert(\"Hey\");", class: "btn glyphicon glyphicon-minus-sign", style: "font-size:1.3em" %>
+                                    <%= link_to '', "#", :onclick => "$('#answer').val(false); $('#question_form').submit();", class: "btn glyphicon glyphicon-minus-sign", style: "font-size:1.3em" %>
 
-                                    <%= link_to '', "#", :onclick => "$('#question_form').submit()", class: "btn glyphicon glyphicon-plus-sign", style: "font-size:1.3em" %>
+                                    <%= link_to '', "#", :onclick => "$('#answer').val(true); $('#question_form').submit();", class: "btn glyphicon glyphicon-plus-sign", style: "font-size:1.3em" %>
                                 </div>
                             </nav> 
                         </footer>
@@ -32,3 +35,5 @@
             </div>
     </div>
 </div>
+
+<%= image_tag @question.image, size: "206x250", id: "profile_img" %>

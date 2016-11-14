@@ -2,21 +2,25 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-q1 = Question.create(inquire: "It is difficult to get you excited?")
-q2 = Question.create(inquire: "You tend to sympathize with other people?")
-q3 = Question.create(inquire: "You value justice higher than mercy?")
-q4 = Question.create(inquire: "You rapidly get involved in the social life of a new workplace?")
-q5 = Question.create(inquire: "You tend to rely on your experience rather than on theoretical alternatives?")
-q6 = Question.create(inquire: "As a rule, you proceed only when you have a clear and detailed plan?")
 
-q7 = Question.create(inquire: "Are you a wanderlust?")
-q8 = Question.create(inquire: "Left or right?")
-q9 = Question.create(inquire: "In general which to you prefer, cold or hot?")
-q10 = Question.create(inquire: "Are you a morning person?")
-q11 = Question.create(inquire: "Silence is golden?")
-q12 = Question.create(inquire: "Do you like when it rains?")
+q1 = Question.create(inquire: "Are you ready for today?", image: "https://i.ytimg.com/vi/ALvep1RsGQ0/hqdefault.jpg")
+q2 = Question.create(inquire: "Do you feel happy?")
+q3 = Question.create(inquire: "Was getting out of bed easy today?")
+q4 = Question.create(inquire: "Do you have a goal today??")
+q5 = Question.create(inquire: "Do you feel motivated?")
+q6 = Question.create(inquire: "Are you ?")
+q7 = Question.create(inquire: "Have you said everything you needed to say?")
+q8 = Question.create(inquire: "If today was your last day alive, would you be ok with that?")
+q9 = Question.create(inquire: "Are you feeling anxious?", image: "ttps://i.ytimg.com/vi/e2byTLRRl5g/maxresdefault.jpg")
+q10 = Question.create(inquire: "Today is your last day, are you ready?")
 
-
+q11 = Question.create(inquire: "Did you make your bed today?", image: "https://i.ytimg.com/vi/ALvep1RsGQ0/hqdefault.jpg")
+q12 = Question.create(inquire: "Did you brush your teeth?")
+q13 = Question.create(inquire: "Did you feed your pet or child or water your plant?")
+q14 = Question.create(inquire: "")
+q15 = Question.create(inquire: "?")
+q16 = Question.create(inquire: "?")
+q17 = Question.create(inquire: "?")
+q18 = Question.create(inquire: "?")
+q19 = Question.create(inquire: "?", image: "ttps://i.ytimg.com/vi/e2byTLRRl5g/maxresdefault.jpg")
+q20 = Question.create(inquire: "?")
