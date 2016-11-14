@@ -4,7 +4,10 @@
             <div class="panel-body">
                 
                 <% if @question %>
+                
+                <% if @question.image != nil %>
                     <%= image_tag @question.image, size: "206x250", id: "profile_img" %>
+                <% end %>
                 
                     <%=  @question.inquire %>
                 
@@ -12,9 +15,6 @@
                         <%= hidden_field_tag :user_id, current_user.id %>
                         <%= hidden_field_tag :question_id, @question.id %>
                         <%= hidden_field_tag :ans, false, id: "answer" %>
-                
-                        <%= f.submit 'true', name: "ans", value: "true", class: "btn glyphicon glyphicon-plus-sign" %>
-                        <%= f.submit 'false', name: "ans", value: "false", class: "btn glyphicon glyphicon-minus-sign" %>
 
                         <footer class="footer">
                             <nav class="navbar navbar-inverse navbar-fixed-bottom">       
@@ -35,5 +35,3 @@
             </div>
     </div>
 </div>
-
-<%= image_tag @question.image, size: "206x250", id: "profile_img" %>

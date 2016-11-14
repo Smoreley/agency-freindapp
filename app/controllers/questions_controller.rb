@@ -4,13 +4,7 @@ class QuestionsController < ApplicationController
         @questions = Question.all
     end 
 
-    def ask
-        
-                  p "THIS IS AWESOME!!!!!!!!!!!!!!!!!!!!!!"
-            p current_user.answers.all.where("created_at >= ?", Time.zone.now.beginning_of_day)
-        
-        p "THE END IS NOW!"
-        
+    def ask        
         Question.all.each do |quest|
             
             @answered_today = current_user.answers.where("created_at >= ?", Time.zone.now.beginning_of_day)

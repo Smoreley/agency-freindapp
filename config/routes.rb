@@ -22,4 +22,8 @@ Rails.application.routes.draw do
     
     post    '/answers'              => 'answers#create'
     get     '/get_questions'        => 'questions#ask'
+    
+    get     '/graphs'          => "graphs#index"
+    get     'graphs/index'
+    get     'graphs/data', :defaults => { :format => 'json' }
 end

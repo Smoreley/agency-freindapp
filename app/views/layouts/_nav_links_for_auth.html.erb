@@ -1,4 +1,4 @@
 <% if user_signed_in? %>
-    <%= link_to '', get_questions_url, class: "btn glyphicon glyphicon-question-sign" %>
-    <%= link_to '', user_path(current_user.id)+"/matches", class: "btn glyphicon glyphicon-gift" %>
+    <%= link_to '', get_questions_url, class: "btn glyphicon glyphicon-question-sign btn_nav" %>
+    <%= link_to '', user_path(current_user.id)+"/matches", class: "btn glyphicon glyphicon-gift btn_nav" %>
 <% end %>
