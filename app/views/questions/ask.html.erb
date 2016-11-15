@@ -1,13 +1,17 @@
 <h1>Question</h1>
+
 <div class="container">
         <div class="panel panel-default">
+            <div class="panel-heading">
+                <% if @question %>
+                    <% if @question.image != nil %>
+                    <%= image_tag @question.image, size: "206x250", id: "profile_img" %>
+                <% end %>
+                <% end %>
+            </div>
             <div class="panel-body">
                 
                 <% if @question %>
-                
-                <% if @question.image != nil %>
-                    <%= image_tag @question.image, size: "206x250", id: "profile_img" %>
-                <% end %>
                 
                     <%=  @question.inquire %>
                 
@@ -15,7 +19,7 @@
                         <%= hidden_field_tag :user_id, current_user.id %>
                         <%= hidden_field_tag :question_id, @question.id %>
                         <%= hidden_field_tag :ans, false, id: "answer" %>
-
+                
                         <footer class="footer">
                             <nav class="navbar navbar-inverse navbar-fixed-bottom">       
                                 <div class="btn-group btn-group-justified" role="group">

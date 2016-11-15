@@ -15,13 +15,11 @@ $.ajax({
            }
        });
 
-function draw(data) {
-var data = [4, 12, 15, 16, 23, 42];
-    
+function draw(data) {    
     
     var x = d3.scaleLinear()
         .domain([0, d3.max(data)])
-        .range([0, 420]);
+        .range([0, 512]);
 
 
     d3.select(".chart")
